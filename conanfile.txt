@@ -1,0 +1,9 @@
+[requires]
+# Example: fmt/10.1.1
+
+[generators]
+CMakeDeps
+CMakeToolchain
+
+[options]
+# Add package options here if needed
