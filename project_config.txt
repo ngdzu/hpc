@@ -1,2 +1,2 @@
-PROJECT_NAME=omp
+PROJECT_NAME=simd_omp
 

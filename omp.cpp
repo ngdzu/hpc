@@ -3,7 +3,7 @@
 #include <omp.h>
 
 int main() {
-    const int N = 1000;
+    const int N = 100000;
     std::vector<int> data(N, 1);
     long long sum = 0;
 
