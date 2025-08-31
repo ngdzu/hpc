@@ -1,2 +1,2 @@
-PROJECT_NAME=simd_omp
+PROJECT_NAME=deep_stack
 
