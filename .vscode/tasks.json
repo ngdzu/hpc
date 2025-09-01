@@ -1,0 +1,64 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Conan Install",
+            "type": "shell",
+            "command": "conan install . --output-folder=build --build=missing",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Clean Build",
+            "type": "shell",
+            "command": "./scripts/clean.sh",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Build Project",
+            "type": "shell",
+            "command": "./scripts/build.sh",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "CMake Configure with Conan",
+            "dependsOrder": "sequence",
+            "dependsOn": ["Conan Install"],
+            "type": "shell",
+            "command": "cmake",
+            "args": ["--preset=conan-release"],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "CMake Build with Conan",
+            "dependsOrder": "sequence", 
+            "dependsOn": ["CMake Configure with Conan"],
+            "type": "shell",
+            "command": "cmake",
+            "args": ["--build", "build"],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}
