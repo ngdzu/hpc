@@ -21,3 +21,5 @@ install_manifest.txt
 
 # Ignore output and temp folders
 out/
+mylog.txt
+project_config.txt

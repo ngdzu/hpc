@@ -7,9 +7,11 @@
             "description": "Sets Unix Makefiles, build and install directory",
             "generator": "Unix Makefiles",
             "binaryDir": "${sourceDir}/build",
+            "toolchainFile": "${sourceDir}/build/conan_toolchain.cmake",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Debug",
-                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}"
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
+                "CMAKE_PREFIX_PATH": "${sourceDir}/build"
             }
         }
     ]
