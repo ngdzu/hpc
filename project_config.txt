@@ -1,2 +1,2 @@
-PROJECT_NAME=deep_stack
+PROJECT_NAME=parallel_sum
 

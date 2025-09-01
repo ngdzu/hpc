@@ -11,9 +11,11 @@ set(CMAKE_CXX_STANDARD 11)
 
 add_executable(${PROJECT_NAME} ${PROJECT_NAME}.cpp)
 
+target_compile_definitions(${PROJECT_NAME} PRIVATE PROJECT_NAME="${PROJECT_NAME}")
+
 
 if(APPLE)
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Xpreprocessor -fopenmp -O2 -Rpass=loop-vectorize -I/opt/homebrew/opt/libomp/include")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include")
     set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -L/opt/homebrew/opt/libomp/lib -lomp")
 endif()
 
