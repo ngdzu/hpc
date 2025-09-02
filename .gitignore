@@ -23,4 +23,5 @@ install_manifest.txt
 
 # Ignore output and temp folders
 out/
+logs/
 mylog.txt

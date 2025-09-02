@@ -49,7 +49,12 @@
     "unordered_map": "cpp",
     "variant": "cpp",
     "algorithm": "cpp",
-    "chrono": "cpp"
+    "chrono": "cpp",
+    "__tree": "cpp",
+    "condition_variable": "cpp",
+    "fstream": "cpp",
+    "iomanip": "cpp",
+    "map": "cpp"
   },
   "cmake.options.statusBarVisibility": "visible",
   "cmake.configureArgs": [
